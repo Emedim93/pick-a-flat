@@ -30,9 +30,9 @@ export default function BookingPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-white p-6">
+    <main className="min-h-screen bg-gradient-to-br from-red-50 to-white p-6">
       <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-2xl p-8">
-        <h1 className="text-4xl font-bold mb-4 text-blue-900">Réservez votre appart hôtel</h1>
+        <h1 className="text-4xl font-bold mb-4 text-red-900">Réservez votre appart hôtel</h1>
         <p className="text-gray-600 mb-6">
           Sélectionnez vos dates de séjour dans le calendrier ci-dessous
         </p>
@@ -70,18 +70,18 @@ export default function BookingPage() {
           </div>
 
           <div className="bg-gray-50 p-6 rounded-xl shadow-inner">
-            <h2 className="text-2xl font-semibold text-blue-800 mb-4">Nos appartements disponibles</h2>
+            <h2 className="text-2xl font-semibold text-grey-800 mb-4">Nos appartements disponibles</h2>
             <ul className="space-y-4">
               <li className="p-4 bg-white shadow rounded-lg">
-                <h3 className="text-lg font-bold text-blue-700">Studio Confort</h3>
+                <h3 className="text-lg font-bold text-green-700">Studio Confort</h3>
                 <p className="text-gray-500">Idéal pour 2 personnes, kitchenette, Wi-Fi gratuit</p>
               </li>
               <li className="p-4 bg-white shadow rounded-lg">
-                <h3 className="text-lg font-bold text-blue-700">Appartement Familial</h3>
+                <h3 className="text-lg font-bold text-green-700">Appartement Familial</h3>
                 <p className="text-gray-500">4 couchages, coin salon, proche des transports</p>
               </li>
               <li className="p-4 bg-white shadow rounded-lg">
-                <h3 className="text-lg font-bold text-blue-700">Suite Prestige</h3>
+                <h3 className="text-lg font-bold text-green-700">Suite Prestige</h3>
                 <p className="text-gray-500">Vue panoramique, services premium, 2 chambres</p>
               </li>
             </ul>
