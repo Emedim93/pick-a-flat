@@ -11,7 +11,7 @@ export default function BookingPage() {
   const [state, setState] = useState([
     {
       startDate: today,
-      endDate: addDays(today, 1),
+      endDate: addDays(new Date(), 1),
       key: "selection",
     },
   ]);
