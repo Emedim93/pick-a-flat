@@ -32,7 +32,7 @@ export default function BookingPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-red-50 to-white p-6">
       <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-2xl p-8">
-        <h1 className="text-4xl font-bold mb-4 text-red-900">Réservez votre appart hôtel</h1>
+        <h1 className="text-4xl font-bold mb-4 text-red-500">Réservez votre appart hôtel</h1>
         <p className="text-gray-600 mb-6">
           Sélectionnez vos dates de séjour dans le calendrier ci-dessous
         </p>
