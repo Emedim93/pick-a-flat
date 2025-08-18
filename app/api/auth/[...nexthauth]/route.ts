@@ -22,6 +22,8 @@ const handler = NextAuth({
         if (
           user &&
           credentials &&
+          typeof credentials.password === "string" &&
+          typeof user.password === "string" &&
           bcrypt.compareSync(credentials.password, user.password)
         ) {
           return user;

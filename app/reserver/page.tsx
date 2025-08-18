@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
@@ -15,9 +15,25 @@ export default function BookingPage() {
       key: "selection",
     },
   ]);
-
+// State pour les dates déjà réservées 
   const [bookedDates, setBookedDates] = useState<{ startDate: Date; endDate: Date }[]>([]);
   const [message, setMessage] = useState("");
+
+// useEffect pour récupérer les réservations depuis l'API
+  useEffect(() => {
+    fetch("/api/reservations")
+      .then((res) => res.json())
+      .then((data) => {
+        const dates = data.map((r: { startDate: string; endDate: string }) => ({
+          startDate: new Date(r.startDate),
+          endDate: new Date(r.endDate),
+          key: "reserved",
+          disabled: true,
+        }));
+        setBookedDates(dates);
+        })
+        .catch((err) => console.error("Erreur fetch reservations:", err))
+  }, []);
 
   const handleBooking = () => {
     const { startDate, endDate } = state[0];
@@ -52,6 +68,7 @@ export default function BookingPage() {
               moveRangeOnFirstSelection={false}
               ranges={state}
               className="rounded-xl shadow"
+              
             />
             <div className="mt-6">
               <Button onClick={handleBooking} className="bg-blue-600 hover:bg-blue-700 text-white">
